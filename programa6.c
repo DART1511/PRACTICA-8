@@ -1,15 +1,18 @@
 #include <stdio.h>
+#define MAX 5
 int main ()
 {
- int lista[5] = {10, 8, 5, 8, 7}; // Se declara e inicializa el arreglo unidimensional
- int indice = 0;
- printf("\tLista\n");
- while (indice < 5 ) // Acceso a cada elemento del arreglo unidimensional usando while
+ int arreglo[MAX], cont;
+ for (cont=0; cont<MAX; cont++)
  {
- printf("\nCalificación del alumno %d es %d", indice+1, lista[indice]);
- indice += 1; // Sentencia análoga a indice = indice + 1;
+ printf("Ingrese el valor %d del arreglo: ", cont+1);
+ scanf("%i", &arreglo[cont]);
  }
-
- printf("\n");
+ printf("El valor ingresado para cada elemento del arreglo es:\n[");
+ for (cont=0; cont<MAX; cont++)
+ {
+ printf("%d\t", arreglo[cont]);
+ }
+ printf("]\n");
  return 0;
 }
